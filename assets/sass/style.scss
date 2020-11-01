@@ -1,0 +1,1242 @@
+@import "https://fonts.googleapis.com/css2?family=Tajawal&display=swap";
+
+$mainColor: #ac202d;
+$secondColor: #071726;
+
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/GE_SS_Two_Light.otf");
+}
+
+@font-face {
+  font-family: myFontMeduim;
+  src: url("../fonts/GE\ SS\ Two\ Medium.otf");
+}
+
+input,
+select,
+textarea,
+button {
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+body {
+  direction: rtl;
+  // font-family: "Tajawal", sans-serif;
+  font-family: myFont;
+  // height: 4000px;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.slider-item {
+  &:focus {
+    outline: 0;
+  }
+}
+
+.path {
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  padding: 70px;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -1;
+  }
+  .path-wrapper {
+    h6 {
+      font-weight: bold;
+      font-size: 30px;
+      color: #fff;
+    }
+    a {
+      font-size: 18px;
+      color: #fff;
+      &::before {
+        @extend %initlizeFonAwesomeAfter;
+        content: "\f053";
+        font-size: 10px;
+        margin-left: 5px;
+      }
+    }
+    .first {
+      &::before {
+        content: "";
+      }
+    }
+  }
+}
+
+
+.top-header {
+  padding: 10px;
+  background: #071726;
+  .container {
+    position: relative;
+  }
+  .top-header-content {
+    .top-contact {
+      text-align: right;
+    }
+    .top-contact span {
+      margin-left: 30px;
+      color: #fff;
+      font-family: "Tajawal", sans-serif;
+    }
+    .top-contact span i {
+      margin: 0 5px;
+      color: $mainColor;
+    }
+    .top-social {
+      text-align: left;
+      a {
+        margin: 0 5px;
+        color: rgb(158, 157, 157);
+        font-size: 16px;
+        text-decoration: none;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.middle-header {
+  padding-top: 13px;
+  .logo {
+    width: auto;
+    height: auto;
+    max-width: 78px;
+    max-height: 78px;
+  }
+  .midel-header-row {
+    margin-top: 28px;
+    .row {
+      margin: 0;
+      .col-lg-4 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .card {
+    border: 0;
+    padding-right: 45px;
+    margin-bottom: 20px;
+    img {
+      max-width: 38px;
+      max-height: 38px;
+      position: absolute;
+      right: 0;
+    }
+    p {
+      width: 55%;
+      margin: 0;
+      line-height: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+.navbar {
+  border-top: 1px solid #e4e2e2;
+  padding: 0;
+  // background-color: transparent !important;
+  .container {
+    position: relative;
+  }
+  .nav-item {
+    .nav-link {
+      font-family: myFontMeduim;
+      font-size: 15px;
+      color: #000;
+    }
+  }
+  .nav-item:last-child {
+    background-color: $mainColor;
+    position: absolute;
+    left: 0;
+    height: 40px;
+    .nav-link {
+      color: #fff;
+    }
+  }
+  .active {
+    .nav-link {
+      color: $mainColor !important;
+      border-bottom: 3px solid $mainColor;
+    }
+  }
+}
+
+.header-slider {
+  .slider-item {
+    height: 510px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    direction: rtl;
+  }
+  .header-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    h5 {
+      font-size: 38px;
+      font-weight: bold;
+      width: 65%;
+      margin: auto;
+      margin-bottom: 11px;
+    }
+    .btn {
+      color: #fff;
+      font-size: 15px;
+      padding: 14px;
+      border: 0;
+      border-radius: 0;
+      margin: 6px;
+      width: 175px;
+    }
+    .order-price {
+      background-color: $mainColor;
+    }
+    .know-more {
+      background-color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+  .slick-arrow {
+    &::before {
+      @extend %initlizeFonAwesomeAfter;
+      @extend %headerArrows;
+      font-size: 12px;
+      color: $mainColor;
+    }
+  }
+  .slick-next {
+    right: 5%;
+    z-index: 999;
+    &::before {
+      content: "\f054";
+    }
+  }
+  .slick-prev {
+    left: 5%;
+    z-index: 999;
+    &::before {
+      content: "\f053";
+    }
+  }
+}
+
+.goals {
+  margin-top: -65px;
+  background-color: #f5f5f5;
+  .row {
+    margin: 0;
+    padding: 0;
+    .col-lg-4 {
+      padding: 0;
+    }
+  }
+  .card {
+    box-shadow: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.3);
+    border: 0;
+    padding: 20px;
+    border-radius: 0;
+    img {
+      max-width: 36px;
+    }
+    .card-title {
+      font-weight: bold;
+      color: $mainColor;
+      font-size: 24px;
+      margin-top: 22px;
+      margin-bottom: 13px;
+    }
+    .card-text {
+      font-size: 16px;
+      color: #333;
+    }
+  }
+}
+
+.home-about {
+  background-color: #f5f5f5;
+  padding-top: 88px;
+  padding-bottom: 90px;
+  .home-about-content {
+    .heading {
+      h6 {
+        color: $mainColor;
+        font-weight: bold;
+      }
+      h5 {
+        font-size: 32px;
+        width: 65%;
+        line-height: 40px;
+        position: relative;
+        padding-bottom: 20px;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 58px;
+          height: 8px;
+          background-color: $mainColor;
+          right: 0;
+          bottom: 0;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+      p {
+        margin-top: 25px;
+        font-size: 16px;
+      }
+    }
+    .home-about-goal {
+      .card {
+        border: 0;
+        padding: 20px;
+        border-radius: 0;
+        position: relative;
+        padding-right: 70px;
+        background-color: transparent;
+        border-radius: 0;
+        img {
+          max-width: 58px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+        .card-title {
+          font-weight: bold;
+          color: #000;
+          font-size: 16px;
+          margin: 0;
+          margin-bottom: 3px;
+        }
+        .card-text {
+          font-size: 16px;
+          color: #333;
+          margin: 0;
+        }
+      }
+    }
+    .for-more {
+      background-color: $mainColor;
+      color: #fff;
+      border-radius: 0;
+      margin-top: 50px;
+    }
+  }
+  .home-about-img {
+    text-align: left;
+    position: relative;
+    .first-img {
+      width: auto;
+      height: auto;
+      max-width: 455px;
+      max-height: 515px;
+    }
+    .second-img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      max-width: 328px;
+      max-height: 328px;
+      right: 0;
+      bottom: -50px;
+    }
+    .experince-box {
+      background-color: #000;
+      border-radius: 5px;
+      text-align: center;
+      width: 130px;
+      height: auto;
+      position: absolute;
+      left: 30%;
+      bottom: 0;
+      transform: translate(-30%, 0);
+      padding-top: 10px;
+      p,
+      h5 {
+        margin: 0;
+        color: #fff;
+      }
+      h5 {
+        font-family: "Tajawal", sans-serif;
+        font-size: 42px;
+      }
+      span {
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.home-services {
+  background-position: center;
+  background-size: cover;
+  // height: 990px;
+  position: relative;
+  padding-top: 84px;
+  &::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .service-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    h6 {
+      color: $mainColor;
+      font-weight: bold;
+      color: #fff;
+    }
+    h5 {
+      font-size: 32px;
+      width: 20%;
+      line-height: 40px;
+      position: relative;
+      padding-bottom: 10px;
+      color: #fff;
+      margin-top: 17px;
+      margin: auto;
+      span {
+        font-weight: bold;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #fff;
+      width: 50%;
+      margin: auto;
+    }
+  }
+  .card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 0;
+    transition: all 0.5s;
+    margin-bottom: 30px;
+    img {
+      max-width: 50px;
+      height: auto;
+      margin: auto;
+    }
+    .card-title,
+    .card-text {
+      margin: 0;
+    }
+    .card-title {
+      margin-top: 13px;
+      margin-bottom: 13px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.5s;
+    }
+    .card-text {
+      color: #afafaf;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .card-link {
+      text-decoration: underline;
+      color: $mainColor;
+      &::after {
+        content: "\f060";
+        margin-right: 5px;
+        font-size: 12px;
+        @extend %initlizeFonAwesomeAfter;
+      }
+    }
+    &:hover {
+      background-color: $mainColor;
+      .card-title {
+        color: #fff;
+      }
+      .card-link {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.offers {
+  background-color: #f5f5f5;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  .offers-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    h6 {
+      color: $mainColor;
+      font-weight: bold;
+    }
+    h5 {
+      font-size: 32px;
+      line-height: 40px;
+      position: relative;
+      padding-bottom: 10px;
+      color: #000;
+      margin-top: 10px;
+      margin: auto;
+      span {
+        font-weight: bold;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #000;
+      width: 50%;
+      margin: auto;
+    }
+  }
+  .offers-slider {
+    .slider-item {
+      margin: 10px;
+    }
+    .card {
+      padding: 10px;
+      border: 0;
+      border-radius: 0;
+      display: inline-block;
+      img {
+        max-width: 225px;
+        margin: auto;
+      }
+      .price,
+      .old-price {
+        font-family: "Tajawal", sans-serif;
+      }
+      .price {
+        color: $mainColor;
+      }
+      .old-price {
+        color: #999;
+        text-decoration: line-through;
+        font-size: 13px;
+        margin-right: 5px;
+      }
+      .card-title {
+        font-size: 16px;
+        color: #112f61;
+      }
+    }
+  }
+  .btn-know-more {
+    margin-top: 20px;
+    .btn {
+      background-color: $mainColor;
+      color: #fff;
+      border-radius: 0;
+      width: 160px;
+    }
+  }
+}
+
+.news {
+  background-color: #000;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  .news-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    h6,
+    h5 {
+      color: #fff;
+    }
+    h5 {
+      font-size: 30px;
+    }
+  }
+  .card {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .card-title,
+  .card-text,
+  .date {
+    color: #fff;
+  }
+  .card-img {
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+  }
+  .date {
+    i {
+      color: #fff;
+    }
+  }
+  .card-title {
+    margin-top: 13px;
+  }
+  .card-text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .card-link {
+    color: $mainColor;
+    &::after {
+      content: "\f060";
+      margin-right: 5px;
+      font-size: 12px;
+      @extend %initlizeFonAwesomeAfter;
+    }
+  }
+  .btn-know-more {
+    margin-top: 50px;
+    .btn {
+      background-color: $mainColor;
+      color: #fff;
+      border-radius: 0;
+      width: 160px;
+    }
+  }
+}
+
+.home-gallery {
+  padding-top: 70px;
+  background-color: #f5f5f5;
+  .heading {
+    font-weight: bold;
+    font-size: 20px;
+    color: $mainColor;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .nav-pills {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px !important;
+    .nav-item {
+      border-radius: 0 !important;
+      padding: 0;
+      .nav-link {
+        color: #000;
+        padding: 0;
+        font-weight: bold;
+        border-radius: 0 !important;
+        margin-left: 20px;
+      }
+    }
+    .active {
+      background-color: transparent;
+      color: $mainColor !important;
+      border-bottom: 2px solid $mainColor;
+    }
+  }
+  .all-gallery {
+    .row {
+      margin: 0;
+      padding: 0;
+      .col-lg-3,
+      .col-md-6,
+      .col-sm-12 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .card {
+      position: relative;
+      border-radius: 0 !important;
+      .card-img {
+        background-position: center;
+        background-size: cover;
+        height: 236px;
+        border-radius: 0 !important;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(172, 32, 45, 0.5);
+        text-align: center;
+        padding-top: 60px;
+        display: none;
+        h5 {
+          color: #fff;
+          width: 60%;
+          margin: auto;
+        }
+        .btn {
+          background-color: rgba(255, 255, 255, 0.5);
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 0;
+          margin-top: 20px;
+        }
+      }
+      &:hover {
+        .overlay {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.home-client {
+  margin-top: 60px;
+  .heading {
+    text-align: center;
+    margin-bottom: 30px;
+    h5 {
+      color: $mainColor;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .clients-slider {
+    .slider-item {
+      .card {
+        border: 0;
+        .card-img {
+          background-position: center;
+          background-size: cover;
+          height: 60px;
+          filter: grayscale(1);
+        }
+      }
+    }
+  }
+}
+
+.about-page{
+  // background-color: #f5f5f5;
+  padding-bottom: 60px;
+  .about-img{
+    // background-position: center;
+    // background-size: cover;
+    margin-top: -50px;
+    height: 405px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .about-pargraph{
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    p{
+      color: rgb(63, 62, 62);
+      font-size: 16px;
+    }
+  }
+  
+  .about-goals-page{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    .card {
+      border: 0;
+      padding: 20px;
+      border-radius: 0;
+      position: relative;
+      padding-right: 70px;
+      background-color: transparent;
+      border-radius: 0;
+      img {
+        max-width: 58px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .card-title {
+        font-weight: bold;
+        color: #000;
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 3px;
+      }
+      .card-text {
+        font-size: 16px;
+        color: #333;
+        margin: 0;
+      }
+    }
+  }
+  
+}
+.footer-an-page{
+  margin-top: 0;
+}
+
+
+.services-page{
+  background-color: #f5f5f5;
+  padding-bottom: 40px;
+  .home-services{
+    &::after{
+      content: "";
+      background-color: none;
+    }
+  }
+}
+
+.service-details-page{
+  .about-img{
+    position: relative;
+  }
+  .img-icon-parent{
+    width: 170px;
+    height: 170px;
+    background-color: $mainColor;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .8;
+  }
+  img{
+    width: 85px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about-pargraph{
+    background-color: #fff !important;
+  }
+}
+
+.offers-page{
+  margin-top: 70px;
+  .card {
+    padding: 10px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+    img {
+      max-width: 225px;
+      margin: auto;
+    }
+    .price,
+    .old-price {
+      font-family: "Tajawal", sans-serif;
+    }
+    .price {
+      color: $mainColor;
+    }
+    .old-price {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 13px;
+      margin-right: 5px;
+    }
+    .card-title {
+      font-size: 16px;
+      color: #112f61;
+    }
+  }
+}
+
+.our-news{
+  .news{
+    background-color: transparent !important;
+    .card{
+      margin-bottom: 20px;
+      .card-title{
+        color: #000;
+      }
+      .card-text{
+        color: #000;
+      }
+
+      .date{
+        span, i{
+          color: #444;
+        }
+      }
+      .card-link{
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+.news-details-page{
+  .new-title {
+    margin-bottom: 30px;
+    .card {
+      background-color: #fff;
+      border: 1px solid rgb(233, 233, 233);
+      padding: 80px;
+      width: 97%;
+      margin: auto;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      position: relative;
+      z-index: 2;
+      margin-top: -60px;
+      height: auto;
+      .card-title {
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+      }
+      .card-link {
+        background-color: $mainColor;
+        position: absolute;
+        left: 20px;
+        top: 20%;
+        transform: translate(0%, -20%);
+        color: #fff;
+        border-radius: 0;
+      }
+      .option{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        a{
+          border: 1px solid #DDD;
+          color: #DDD;
+          padding: 10px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+.contact-us-page{
+  margin-top: 70px;
+  .contact-content{
+    h5{
+      font-weight: bold;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+    p{
+      font-size: 14px;
+    }
+    .card {
+      position: relative;
+      padding-right: 20px;
+      border-radius: 0;
+      background-color: transparent;
+      margin-bottom: 20px;
+      border: 0;
+      i {
+        position: absolute;
+        right: 0;
+        color: $mainColor;
+      }
+      p {
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+      }
+    }
+  }
+  .contact-form{
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.3);
+    .form-control{
+      height: 50px;
+    }
+    .form-group-text{
+      .form-control{
+        height: 195px;
+      }
+    }
+    .btn{
+      background-color: $mainColor;
+      color: #fff;
+      border-radius: 0;
+    }
+  }
+}
+
+
+.book-show {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  .card {
+    position: relative;
+    padding: 20px;
+    padding-right: 320px;
+    height: 230px;
+    border: 0;
+    .card-img {
+      img {
+        width: auto;
+        height: auto;
+        max-height: 430px;
+        max-width: 275px;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        right: 20px;
+      }
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .old-price, .price {
+      font-family: "Tajawal", sans-serif;
+    }
+    .price{
+      color: $mainColor;
+      font-size: 20px;
+    }
+    .old-price{
+      text-decoration: line-through;
+    }
+  }
+  .par {
+    padding-right: 0;
+    padding: 20px;
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+
+footer {
+  background-color: #000;
+  padding-top: 130px;
+  margin-top: 40px;
+  .logo {
+    img {
+      width: auto;
+      max-width: 78px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #fff;
+      font-size: 14px;
+    }
+    a {
+      i {
+        width: 39px;
+        height: 39px;
+        line-height: 39px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-right: 5px;
+        color: #444;
+        &:hover {
+          background-color: $mainColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .links {
+    h5 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+    ul {
+      li {
+        width: 50%;
+        float: right;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .contact {
+    h5 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+    .card {
+      position: relative;
+      padding-right: 20px;
+      border-radius: 0;
+      background-color: transparent;
+      margin-bottom: 20px;
+      i {
+        position: absolute;
+        right: 0;
+        color: $mainColor;
+      }
+      p {
+        font-size: 13px;
+        color: #fff;
+        margin: 0;
+      }
+    }
+    .card-phone {
+      p {
+        font-family: "Tajawal", sans-serif;
+      }
+    }
+  }
+  .footer-news{
+    h5 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+    .card{
+      background-color: transparent;
+      border-radius: 0;
+      padding-right: 120px;
+      margin-bottom: 20px;
+      .card-img{
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        right: 0;
+        // width: auto;
+        // height: auto;
+        height: 80px;
+        width: 113px;
+      }
+      .card-text{
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+      }
+      .date{
+        color: #fff;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    // padding-bottom: 10px;
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  .navbar .nav-item:last-child {
+    position: unset;
+  }
+  .header-slider .header-content h5 {
+    width: 100%;
+  }
+  .top-header .top-header-content .top-contact span {
+    display: inline-block;
+  }
+  .header-slider .header-content {
+    width: 90%;
+  }
+  .top-header .top-header-content .top-contact span {
+    margin-left: 0;
+  }
+  .top-header .top-header-content .top-contact {
+    text-align: center;
+  }
+  .top-header .top-header-content .top-social {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .news .card{
+    margin-bottom: 20px;
+  }
+  .home-gallery .nav-pills{
+    width: 90%;
+  }
+}
+
+@media (max-width: 524px) {
+  .home-about .home-about-img .first-img {
+    width: 100%;
+  }
+  .home-about .home-about-img .second-img {
+    width: 100%;
+    position: unset;
+  }
+  .home-services .service-heading h5,
+  .home-services .service-heading p {
+    width: 100%;
+  }
+  .home-gallery .nav-pills{
+    width: 100%;
+  }
+  .home-gallery .nav-pills .nav-item{
+    width: 100%;
+    margin: 10px;
+  }
+  .home-gallery .nav-pills .active{
+    background-color: $mainColor;
+    color: #fff !important;
+    padding: 6px !important;
+  }
+  .book-show .card {
+    padding-right: 20px;
+    height: auto;
+    img {
+      position: unset !important;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+%initlizeFonAwesomeAfter {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+%headerArrows {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background-color: #fff;
+}
